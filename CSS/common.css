@@ -1,0 +1,168 @@
+body{
+    background-color: rgba(190, 247, 234, 0.521);
+    align-items: center;  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-variant-numeric: slashed-zero;
+} 
+
+/* Navigation styling */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    text-decoration: none;
+    background: none;
+    position: relative;
+}
+
+nav a, nav button {
+    text-decoration: none !important;
+    border: none !important;
+    background: none;
+    color: black;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+}
+
+nav a:hover, nav button:hover {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+button {
+    border: none;
+    border-radius: 70%;
+    padding: 10px 20px;
+    background: none;
+    cursor: pointer;
+}
+
+header {
+    background-color: aqua;
+    align-items: flex-start;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: none;
+}
+table{
+    border-radius:50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    table-layout: fixed;
+    border: 4cm;
+    padding:15%
+}
+th{
+    background-color: rgb(19, 196, 209);
+    border-color: rgba(127, 240, 255, 0.39);
+    font: rgb(25, 33, 49);
+    font-weight: 150;
+    font-size: medium;
+}
+td{
+    background-color: rgb(192, 227, 250);
+}
+p{
+   text-align: justify;
+   text-justify: inter-word;
+   padding-top: 45px;
+   
+ }
+ 
+ input{
+     border: 0px solid; /* Thin border */
+    border-radius: 10px; /* Smooth edges */
+    padding-top: 20px; /* Padding inside the button */
+    padding-bottom: 20;
+    justify-content: space-around;
+ }
+/* Remove global img sizing so logos display at their natural size.
+   Small/aside images are handled by .aside-image. */
+
+.header-text{
+    padding-bottom: 50px;
+    padding-top: 15px;
+    padding-left: 0;
+}
+
+/* Ensure header logo shows at natural dimensions (limit max height if needed) */
+.header-image img {
+    width: auto;
+    height: auto;
+    max-height: 120px;
+}
+
+/* Content Layout Classes */
+.content-row {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.text-block {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ .nav-item{
+    font: white;
+    box-sizing: 15px;
+    border-radius: 20%;
+
+
+ }
+ .nav-item:hover{
+    font: black ;
+    background-color: rgb(129, 180, 247);
+ }
+ .nav-item:active{
+   font: black;
+   background-color: rgb(129, 180, 247);
+ }
+ 
+/* Paragraph + image layout helpers */
+.content-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* keep image and text aligned at top */
+    margin: 1rem 0;
+}
+
+.text-block {
+    width: 800px; /* fixed width requested by user */
+    height: 800px; /* fixed height requested by user */
+    overflow: auto; /* scroll if content exceeds height */
+    padding: 20px;
+    background: rgba(255,255,255,0.95); /* subtle background to separate from page */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.aside-image {
+    max-width: 320px; /* keep image reasonable beside the 800px text */
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Helper classes to float a smaller image on left or right of a text block */
+.figure-left { order: 0; }
+.figure-right { order: 1; }
+
+@media (max-width: 1200px) {
+    /* On smaller screens, stack the image above the text for readability */
+    .content-row { flex-direction: column; }
+    .text-block { width: 100%; height: auto; }
+    .aside-image { width: 100%; height: auto; max-width: 100%; }
+}

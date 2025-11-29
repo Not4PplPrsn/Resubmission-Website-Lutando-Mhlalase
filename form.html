@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Application form for Mary Seacole Nursing School">
+        <meta name="keywords" content="nursing school, application, education, Mary Seacole">
+        <title>Application Form - Mary Seacole Nursing School</title>
+        <link rel="stylesheet" href="./CSS/style.css" type="text/css">
+        <style>
+            .form-group {
+                margin-bottom: 1rem;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+            .form-group input[type="text"],
+            .form-group input[type="number"],
+            .form-group input[type="file"] {
+                width: 100%;
+                padding: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .parent-details,
+            .academic-details {
+                margin-bottom: 2rem;
+                padding: 1rem;
+                background-color: #f8f9fa;
+                border-radius: 4px;
+            }
+            h1, h2, h4, h5 {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin-bottom: 1rem;
+            }
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                padding: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+    <header>
+        <div class="header-text">
+            The Mary Seacole Nursing School 
+        </div>
+        <div class="header-image">
+           <img src="./images/LOGO.png" alt="School Logo" class="no-lightbox" />
+            <!-- Mary Seacole Nursing School Logo -->
+        </div>
+        
+        <!-- Navigation Menu:
+            HOME | CONTACT US | ABOUT US | APPLY
+        -->
+        <nav>
+            <a href="home.html">
+                <button class="nav-item" type="button">HOME</button>
+            </a>
+            <a href="contact.html">
+                <button class="nav-item" type="button">CONTACT US</button>
+            </a>
+            <a href="about.html">
+                <button type="button" class="nav-item">ABOUT US</button>
+            </a>
+            <a href="form.html">
+                <button type="button" class="nav-item">APPLY</button>
+            </a>
+        </nav>
+    </header>
+        <h1>
+            Please enter  the required details 
+        </h1>
+
+        <h2>
+            Personal Details 
+        </h2>
+        <form action="./finnishedFields.html/" method="post" id="registrationForm">
+            <div class="form-group">
+                <p>Are you a Jamaican citizen?</p>
+                <div class="radio-group">
+                    <input type="radio" id="citizenship1" name="citizenship" value="yes">
+                    <label for="citizenship1">Yes</label>
+                    <input type="radio" id="citizenship2" name="citizenship" value="no">
+                    <label for="citizenship2">No</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="idNumber">ID Number:</label>
+                <input type="number" id="idNumber" name="idNumber" placeholder="Enter your ID number"><br><br>
+            </div>
+
+            <h4>Please enter your name(s)</h4>
+            <div class="form-group">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br>
+            </div>
+        
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br>
+            </div>
+
+            <div class="form-group">
+                <label for="mname">Middle Name(s):</label>
+                <input type="text" id="mname" name="mname" placeholder="Enter your middle name(s)"><br><br>
+            </div>
+
+
+            <h4>Enter your address:</h4>
+
+            <p>Residential Address </p>
+                <div class="form-group">
+                    <label for="residentialStreet">Street and number:</label>
+                    <input type="text" name="residentialStreet" id="residentialStreet" placeholder="Enter street address"><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="residentialSuburb">Suburb:</label>
+                    <input type="text" name="residentialSuburb" id="residentialSuburb" placeholder="Enter suburb"><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="residentialCity">City:</label>
+                    <input type="text" name="residentialCity" id="residentialCity" placeholder="Enter city"><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="residentialPostcode">Postal code:</label>
+                    <input type="number" name="residentialPostcode" id="residentialPostcode" placeholder="Enter postal code"><br><br>
+                </div>
+
+                <p>Is your residential address the same as the postal address?</p>
+                <div class="form-group">
+                    <input type="radio" name="sameAddress" id="sameAddressYes" value="yes">
+                    <label for="sameAddressYes">Yes</label>
+
+                    <input type="radio" name="sameAddress" id="sameAddressNo" value="no">
+                    <label for="sameAddressNo">No</label>
+                </div><br><br>
+
+                <div id="postalAddressSection">
+                    <p>If No, please enter the following details:</p>
+
+                    <div class="form-group">
+                        <label for="postalStreet">Street and number:</label>
+                        <input type="text" name="postalStreet" id="postalStreet" placeholder="Enter postal street address"><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postalSuburb">Suburb:</label>
+                        <input type="text" name="postalSuburb" id="postalSuburb" placeholder="Enter postal suburb"><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postalCity">City:</label>
+                        <input type="text" name="postalCity" id="postalCity" placeholder="Enter postal city"><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postalPostcode">Postal code:</label>
+                        <input type="number" name="postalPostcode" id="postalPostcode" placeholder="Enter postal code"><br><br>
+                    </div>
+                </div>
+        <h2>
+            Parental Details 
+        </h2>
+        <h4>Please enter your Parent's details</h4>
+        <div class="parent-details">
+            <h5>Father's Details</h5>
+            <div class="form-group">
+                <label for="fatherID">Father's ID:</label>
+                <input type="text" name="fatherID" id="fatherID" placeholder="Enter father's ID number">
+            </div>
+
+            <div class="form-group">
+                <label for="fatherFname">First name:</label>
+                <input type="text" id="fatherFname" name="fatherFname" placeholder="Enter father's first name">
+            </div>
+            
+            <div class="form-group">
+                <label for="fatherLname">Last Name:</label>
+                <input type="text" id="fatherLname" name="fatherLname" placeholder="Enter father's last name">
+            </div>
+
+            <div class="form-group">
+                <label for="fatherMname">Middle Name(s):</label>
+                <input type="text" id="fatherMname" name="fatherMname" placeholder="Enter father's middle name(s)">
+            </div>
+
+            <h5>Mother's Details</h5>
+            <div class="form-group">
+                <label for="motherID">Mother's ID:</label>
+                <input type="text" name="motherID" id="motherID" placeholder="Enter mother's ID number">
+            </div>
+
+            <div class="form-group">
+                <label for="motherFname">First name:</label>
+                <input type="text" id="motherFname" name="motherFname" placeholder="Enter mother's first name">
+            </div>
+        
+            <div class="form-group">
+                <label for="motherLname">Last Name:</label>
+                <input type="text" id="motherLname" name="motherLname" placeholder="Enter mother's last name">
+            </div>
+
+            <div class="form-group">
+                <label for="motherMname">Middle Name(s):</label>
+                <input type="text" id="motherMname" name="motherMname" placeholder="Enter mother's middle name(s)">
+            </div>
+        </div>
+        
+        <h2>Academic</h2>
+        <div class="academic-details">
+            <div class="form-group">
+                <p>What are you applying for?</p>
+                <input type="radio" name="degreeType" id="undergrad" value="undergraduate">
+                <label for="undergrad">Undergraduate Degree</label><br>
+        
+                <input type="radio" name="degreeType" id="postgrad" value="postgraduate">
+                <label for="postgrad">Post Graduate Degree</label>
+            </div>
+
+            <div class="form-group" id="courseMode">
+                <p>If you are doing post graduate, how will your course be administered?</p>
+                <input type="radio" name="courseTime" id="partTime" value="part-time">
+                <label for="partTime">Part-time</label>
+           
+                <input type="radio" name="courseTime" id="fullTime" value="full-time">
+                <label for="fullTime">Full-time</label>
+            </div>
+        </div>
+
+        <h2>Required Documents</h2>
+        <p>Please attach all the mentioned documents</p>
+        <div class="form-group">
+            <label for="studentIDDoc">Student ID:</label>
+            <input type="file" name="studentIDDoc" id="studentIDDoc" accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+        <div class="form-group">
+            <label for="studentMatric">Student Matric:</label>
+            <input type="file" name="studentMatric" id="studentMatric" accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+        <div class="form-group">
+            <label for="motherIDDoc">Mother's ID:</label>
+            <input type="file" name="motherIDDoc" id="motherIDDoc" accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+        <div class="form-group">
+            <label for="fatherIDDoc">Father's ID:</label>
+            <input type="file" name="fatherIDDoc" id="fatherIDDoc" accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+        </form>
+        <button id="saveAndClearBtn" type="button" style="width: 3cm; height: inherit; background-color: rgb(106, 228, 212); border-radius: 010%;">Save & Clear</button>
+        
+        <!-- Script references -->
+        <script src="./scripts/main.js"></script>
+        <script src="./scripts/validations.js"></script>
+    </body>
+    <footer>
+    </footer>
+<!-- 
+References:
+The IIE (2025)
+-->
+</html>
